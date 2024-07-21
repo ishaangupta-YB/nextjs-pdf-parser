@@ -15,6 +15,7 @@ function HomePage() {
   const { toast } = useToast();
   const [parsedText, setParsedText] = useState("");
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleFileUpload = async (file: File) => {
     setUploadedFile(() => {
@@ -29,6 +30,7 @@ function HomePage() {
       title: "File Uploaded",
       description: `${file.name} has been uploaded successfully.`,
     });
+    setLoading(true);
   };
 
   return (
@@ -48,12 +50,20 @@ function HomePage() {
           <div className="grid gap-4 py-4">
             <FileUpload
               onFileUpload={handleFileUpload}
-              setParsedText={setParsedText}
+              setParsedText={(text: string) => {
+                setParsedText(text);
+                setLoading(false);
+              }}
               maxSize={8 * 1024 * 1024} // 8 MB
             />
           </div>
         </DialogContent>
       </Dialog>
+      {loading && (
+        <div className="mt-6 flex items-center justify-center">
+          <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
+        </div>
+      )}
       {parsedText && (
         <div className="mt-6 w-full max-w-3xl bg-white p-4 rounded shadow">
           <h3 className="text-xl font-semibold mb-2">Parsed Text</h3>

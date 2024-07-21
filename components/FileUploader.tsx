@@ -25,7 +25,7 @@ export default function FileUpload({
 }: {
   onFileUpload: (file: File) => void;
   setParsedText: (text: string) => void;
-  maxSize:number;
+  maxSize: number;
 }) {
   const [filesToUpload, setFilesToUpload] = useState<FileUploadProgress[]>([]);
   const { toast } = useToast();
@@ -96,7 +96,6 @@ export default function FileUpload({
     accept: {
       "application/pdf": [".pdf"],
     },
-    // maxSize: 8 * 1024 * 1024,
     maxSize: maxSize,
   });
 
@@ -105,7 +104,7 @@ export default function FileUpload({
       <div>
         <label
           {...getRootProps()}
-          className="relative flex flex-col items-center justify-center w-full py-6 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 "
+          className="relative flex flex-col items-center justify-center w-full py-6 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
         >
           <div className="text-center">
             <div className="border p-2 rounded-md max-w-min mx-auto">
