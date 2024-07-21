@@ -1,11 +1,12 @@
 import { Footer } from "@/components/Footer";
-import HomePage from "@/components/HomePage";
-
+import GitHubCorner from "@/components/GithubCorner";
+import HomePage from "@/components/HomePage"; 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">  
       <main className="flex-grow">
-        <HomePage />
+        <GitHubCorner/> 
+        <HomePage />   
       </main>
       <footer className="sticky bottom-0">
         <Footer />

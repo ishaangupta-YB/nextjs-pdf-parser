@@ -35,7 +35,7 @@ function HomePage() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          <button className="bg-black hover:bg-gray-700 text-white text-lg font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
             Upload File
           </button>
         </DialogTrigger>
@@ -67,3 +67,4 @@ function HomePage() {
 }
 
 export default HomePage;
+
