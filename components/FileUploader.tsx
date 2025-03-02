@@ -108,7 +108,7 @@ export default function FileUpload({
         >
           <div className="text-center">
             <div className="border p-2 rounded-md max-w-min mx-auto">
-              <UploadCloud size={20} />
+              <UploadCloud  style={{ color: "#000000" }} size={20} />
             </div>
             <p className="mt-2 text-sm text-gray-600">
               <span className="font-semibold">Drag and drop PDF files</span>

@@ -5,7 +5,7 @@ import { ModeToggle } from "@/components/ToggleMode";
 import { useToast } from "@/components/ui/use-toast";
 import FileUpload from "@/components/FileUploader";
 import Link from "next/link";
-import { ArrowLeft, FileText, Copy, Download } from "lucide-react";
+import { ArrowLeft, FileText, Copy  } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,

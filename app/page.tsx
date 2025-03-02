@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ToggleMode";
 import Link from "next/link";
 import { ArrowRight, FileText, Code, Shield, Zap, Github } from "lucide-react";
+import { LinkPreview } from "@/components/ui/link-preview";
 
 export default function LandingPage() {
   return (
@@ -73,7 +74,7 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section> 
+      </section>
 
       <section className="py-20">
         <div className="container px-4 md:px-6">
@@ -136,18 +137,17 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t border-border py-6 mt-auto">
         <div className="container px-4 md:px-6">
           <div className="flex justify-center items-center gap-2 text-sm text-muted-foreground">
             <span>
               © 2023 PDF Parser • Made with ❤️ by{" "}
-              <a
-                href="https://github.com/ishaangupta-YB"
+              <LinkPreview
+                url="https://github.com/ishaangupta-YB"
                 className="text-primary hover:underline"
               >
                 ishaangupta-YB
-              </a>{" "}
+              </LinkPreview>{" "}
               •{" "}
             </span>
             <a
