@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-        serverComponentsExternalPackages: ['pdf2json'],
-    },
-    swcMinify: true,
+    // Moved from experimental.serverComponentsExternalPackages in Next.js 15+
+    serverExternalPackages: ['pdf2json'],
     compress: true,
     reactStrictMode: true,
 };
